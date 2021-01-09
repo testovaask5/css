@@ -1,0 +1,27 @@
+.container {
+    margin-top: 50px;
+    background-color: burlywood;
+    height: 200px;
+    width: 100%;
+    /* position: relative; */
+}
+
+.child {
+    background-color: rgb(155, 3, 3);
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /* transform: translate(180px, 50px); */
+}
+
+.child2 {
+    background-color: chartreuse;
+    height: 100px;
+    width: 100px;
+    position: fixed;
+}

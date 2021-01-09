@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+}
+
+.picture {
+    background: url('slide-1960x857-07.jpg');
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    color: white;
+    font-size: 60px;
+    background-color: rgba(80, 11, 92, 0.664);
+    text-transform: uppercase;
+}
