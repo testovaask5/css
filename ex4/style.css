@@ -1,3 +1,14 @@
+@keyframes block-in {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
 * {
     box-sizing: border-box;
 }
@@ -15,6 +26,7 @@ body {
     width: 100%;
     height: 100vh;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .header {
@@ -23,14 +35,56 @@ body {
     left: 0;
     bottom: 0;
     right: 0;
+    background-color: rgba(80, 11, 92, 0.664);  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-anim {
+    opacity: 0;
+    animation: block-in .5s linear .5s;
+    animation-name: block-in;
+    animation-duration: .5s;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+    /* animation-iteration-count: infinite; */
+    animation-fill-mode: forwards;
+}
+
+.section {
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
+    position: static;
+}
+
+.header h1, .section h2 {
     font-family: sans-serif;
     color: white;
-    font-size: 60px;
-    background-color: rgba(80, 11, 92, 0.664);
+    font-size: 4rem;
     text-transform: uppercase;
 }
+
+.section-1 {
+    background-color: rgb(6, 90, 48);
+}
+
+.section-2 {
+    background-color: rgb(185, 42, 42);
+}
+
+.section-anim {
+    opacity: 0;
+}
+
+.section-anim.show {
+    animation: block-in .5s linear .5s;
+    animation-fill-mode: forwards;
+}
+
+
