@@ -87,4 +87,57 @@ body {
     animation-fill-mode: forwards;
 }
 
+.main-menu {
+    position: fixed;
+    z-index: 9999;
+    height: 7vh;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+}
 
+.main-menu.show {
+    overflow: visible;
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    gap: 2rem;
+    margin: 0;    
+    align-items: center;
+    
+}
+
+.menu li {
+    list-style-type: none;
+    flex-basis: 8rem;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+@media (max-width: 576px) {
+    .hamburger-container {
+        display: block;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+        top: 100%;
+        transform: none;
+        padding-top: .5rem;
+        width: 100%;        
+        background-color: white;
+    }
+    
+    .menu li {
+        flex-basis: 1rem;
+    }
+}

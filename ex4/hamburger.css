@@ -1,0 +1,49 @@
+.hamburger-container {
+    display: none;
+    position: absolute;
+    height: 45px;
+    right: 1rem;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+}
+
+.hamburger-icon {    
+    cursor: pointer;
+}
+
+.hamburger-checkbox {
+    cursor: pointer;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+
+.hamburger-icon span {
+    height: 5px;
+    width: 40px;
+    background-color: black;
+    display: block;
+    margin: 5px 0;
+    transition: all .7s;
+    transform: none;
+}
+
+.hamburger-checkbox:checked + .hamburger-icon span:first-child {
+    opacity: 0;
+}
+
+.hamburger-checkbox:checked + .hamburger-icon span:last-child {
+    opacity: 0;
+}
+
+.hamburger-checkbox:checked + .hamburger-icon span:nth-of-type(2) {
+    transform: translateY(100%) rotate(-45deg);
+}
+
+.hamburger-checkbox:checked + .hamburger-icon span:nth-of-type(3) {
+    transform: translateY(-100%) rotate(45deg);
+}

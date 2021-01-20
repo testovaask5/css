@@ -22,3 +22,13 @@ document.onwheel = function() {
         section1.classList.add('show')
     }
 }
+
+const mainMenu = document.querySelector('.main-menu')
+const hamburger = document.querySelector('.hamburger-checkbox')
+hamburger.onclick = function() {
+    if (hamburger.checked) {
+        mainMenu.classList.add('show')
+    } else {
+        mainMenu.classList.remove('show')
+    }
+}
